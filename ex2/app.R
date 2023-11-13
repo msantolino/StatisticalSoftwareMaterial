@@ -40,14 +40,6 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram ----
 server <- function(input, output) {
   
-  # Histogram of the Old Faithful Geyser Data ----
-  # with requested number of simulations
-  # This expression that generates a histogram is wrapped in a call
-  # to renderPlot to indicate that:
-  #
-  # 1. It is "reactive" and therefore should be automatically
-  #    re-executed when inputs (input$simulationss) change
-  # 2. Its output type is a plot
   output$distPlot <- renderPlot({
     
     simulations    <- input$simulations
